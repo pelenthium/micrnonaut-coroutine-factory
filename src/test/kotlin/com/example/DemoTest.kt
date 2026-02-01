@@ -48,6 +48,7 @@ class DemoTest {
         Assertions.assertEquals("MyRandomIdFromUI2", r)
     }
 
+    // This test is always failed, due to ServerRequestContext.currentRequest<Any>() = null in HttpCoroutineContextFactory
     @Test
     fun testItWorksWithHeaderAndFile() = runBlocking {
         val body = MultipartBody.builder()
